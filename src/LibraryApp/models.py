@@ -5,7 +5,7 @@ class Book(models.Model):
     author = models.ForeignKey('Author', on_delete=models.CASCADE)
     
     def __str__(self):
-        return "%s | %s" % (self.title, self.author)
+        return self.title
 
 class Author(models.Model):
     first_name = models.CharField("author's first name", max_length=50)

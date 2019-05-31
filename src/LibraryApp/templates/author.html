@@ -1,0 +1,8 @@
+<h1>{{ author.first_name }} {{ author.last_name }}</h1>
+<hr/>
+<h3>Libros</h3>
+<ul>
+{% for book in book_list %}
+	<li><a href="{% url 'library:book' pk=book.pk %}">{{ book.title }}</a></li>
+{% endfor %}
+</ul>
